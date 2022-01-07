@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "./;main";
+
+import "google/api/annotations.proto";
+
+service PathService {
+	rpc GetPath(PathRequest) returns (Path) {
+		option (google.api.http) = {
+			post: "/v1/get_path"
+			body: "*"
+		};
+	}
+}
+
+message Path {
+	message Point {
+		int32 x = 1;
+		int32 y = 2;
+	}
+	repeated Point path = 1; 
+}
+
+message PathRequest {
+	int32 x_start = 1;
+	int32 y_start = 2;
+	int32 x_end = 3;
+	int32 y_end = 4;
+}
