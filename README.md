@@ -10,3 +10,5 @@ curl -X POST -d '{"x_start":2965, "y_start":3380, "x_end":2965, "y_end": 3490}' 
 ```
 
 If you are a client owner who is interested in hosting their own server or implementing their own client library to use this service just send me a dm. 
+
+https://www.youtube.com/watch?v=2oq3lZxJRc8
